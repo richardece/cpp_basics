@@ -1,0 +1,36 @@
+@startuml
+'scale 350 width
+[*] --> firstState
+
+state firstState{
+    'Initial declared in mpl::list
+    [*] --> firstStateInner_1_0
+    'Substates under orthogonal<0>
+    state firstStateInner_1_0 {
+
+    }
+    state firstStateInner_1_1 {
+
+    }
+    state firstStateInner_1_2 {
+
+    }
+    firstStateInner_1_0 --> firstStateInner_1_1 : event1
+    firstStateInner_1_1 --> firstStateInner_1_2 : event2
+
+    --
+    'Initial declared in mpl::list
+    [*] --> firstState_Inner_2
+    'Substates under orthogonal<1>
+    state firstState_Inner_2{
+
+    }
+    --
+    'Initial declared in mpl::list
+    [*] --> firstState_Inner_3
+    'Substates under orthogonal<2>
+    state firstState_Inner_3{
+        
+    }
+}
+@enduml

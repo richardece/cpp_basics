@@ -1,0 +1,25 @@
+@startuml
+scale 350 width
+[*] --> firstState
+
+state firstState{
+    firstState --> secondState : event_MoveToSecondState
+    firstState --> thirdState : event_MoveToThirdState
+
+}
+state secondState {
+    secondState --> thirdState : event_MoveToThirdState
+    secondState --> firstState : event_MoveToFirstState
+}
+state thirdState {
+    thirdState --> fourthState : event_MoveToFourthState
+    thirdState --> firstState : event_MoveToFirstState
+    thirdState --> secondState : event_MoveToSecondState
+}
+state fourthState {
+    [*] --> Inner1
+    Inner1 --> Inner2 :eventInner1to2
+    Inner2 --> Inner3 :eventInner2to3
+    Inner3 --> firstState :eventInner3toFirstState
+}
+@enduml
