@@ -14,6 +14,7 @@ void showdq(deque <int> g)
 int main() {
     std::cout << "Hello, World!" << std::endl;
 
+    //Front is index 0; back is index n-1 (last item)
     deque <int> gquiz;
     gquiz.push_back(10);
     gquiz.push_front(20);

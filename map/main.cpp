@@ -1,6 +1,7 @@
 #include <iostream>
 #include <map>  //for map and multimap
 #include <unordered_map>
+#include <string>
 
 using namespace std;
 
@@ -67,7 +68,7 @@ int main() {
         cout << it->first << " - " << it->second << endl;
     }
 #endif
-#if 1
+#if 0
     //Stored as a hash
     //Much faster than maps
     unordered_multimap <int, int> mp;
@@ -87,6 +88,18 @@ int main() {
     }
 #endif
 
+#if 1
+    //Stored as a hash
+    //Much faster than maps
+    map <string, float> mp = {
+            {"K1", 1.1},
+            {"K2", 0.0}
+    };
 
+
+    for (auto it = mp.begin(); it != mp.end(); it++){
+        cout << it->first << " - " << it->second << endl;
+    }
+#endif
     return 0;
 }
